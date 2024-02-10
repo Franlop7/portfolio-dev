@@ -1,9 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Portfolio</h1>
-	</main>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="https://www.zoomadrid.com/content/dam/zoo/images/animals/koala/Koala-Zoo-Madrid-2.jpg"
+        alt="Photo koala"
+      />
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, soy Fran <a
+          href="https://linkedin.com/in/francisco-l%C3%B3pez-torres"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center"
+        >
+          <Badge>Disponible para ser contratado</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl opacity-80 text-wrap">
+        Desarrollador Web. De Málaga, España. Especializado en crear sensaciones
+        increibles para el usuario.
+      </h2>
+
+      <ul></ul>
+    </section>
+  </main>
 </Layout>
