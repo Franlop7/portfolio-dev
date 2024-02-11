@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -22,11 +23,22 @@ import Badge from "../components/Badge.astro";
         </a>
       </h1>
       <h2 class="text-2xl opacity-80 text-wrap">
-        Desarrollador Web. De Málaga, España. Especializado en crear sensaciones
-        increibles para el usuario.
+        <span class="text-yellow-200/90">Desarrollador Web</span>.<span
+          class="text-blue-200/90"
+        >
+          De Málaga, España</span
+        >. <span class="opacity-85"
+          >Especializado en crear sensaciones increibles para el usuario.</span
+        >
       </h2>
 
-      <ul></ul>
+      <ul>
+        <li>
+          <a href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
+            <LinkedinIcon class="w-6 h-6" />LinkedIn</a
+          >
+        </li>
+      </ul>
     </section>
   </main>
 </Layout>
