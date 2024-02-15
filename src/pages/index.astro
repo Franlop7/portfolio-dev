@@ -1,7 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
 import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -32,13 +34,16 @@ import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
         >
       </h2>
 
-      <ul>
-        <li>
-          <a href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
-            <LinkedinIcon class="w-6 h-6" />LinkedIn</a
-          >
-        </li>
-      </ul>
+      <nav class="flex mt-8 gap-x-2">
+        <SocialPill href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
+          <LinkedinIcon class="w-6 h-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
+          <GitHubIcon class="w-6 h-6" />
+          Github
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
