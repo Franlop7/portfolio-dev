@@ -5,20 +5,25 @@ import SocialPill from "../components/SocialPill.astro";
 import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
   title="Portfolio de Fran - Desarrollador y Programador Web."
   description="¡Hola! Soy Fran, desarrollador y programador web apasionado por crear experiencias digitales increíbles. Echa un vistazo a mi portfolio para descubrir mis proyectos y habilidades en desarrollo web, diseño de interfaces y más. ¡Contáctame para colaborar en tu próximo proyecto!"
 >
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+  <main class="px-4">
+    <SectionContainer class="py-44 md:py-36">
       <img
         class="rounded-full size-12 mb-4"
         src="https://www.zoomadrid.com/content/dam/zoo/images/animals/koala/Koala-Zoo-Madrid-2.jpg"
-        alt="Photo koala"
+        alt="koala en árbol"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hey, soy Fran <a
           href="https://linkedin.com/in/francisco-l%C3%B3pez-torres"
           target="_blank"
@@ -28,7 +33,7 @@ import MailIcon from "../components/icons/MailIcon.astro";
           <Badge>Disponible para ser contratado</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
         <span class="text-yellow-200/90">Desarrollador Web</span>.<span
           class="text-blue-200/90"
         >
@@ -38,20 +43,29 @@ import MailIcon from "../components/icons/MailIcon.astro";
         >
       </h2>
 
-      <nav class="flex mt-8 gap-x-4">
+      <nav class="flex mt-8 gap-4 flex-wrap">
         <SocialPill href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
-          <LinkedinIcon class="size-6" />
+          <LinkedinIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 md:size-6" />
           Github
         </SocialPill>
         <SocialPill href="https://linkedin.com/in/francisco-l%C3%B3pez-torres">
-          <MailIcon class="size-6" />
+          <MailIcon class="size-4 md:size-6" />
           Franciscolopto@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <div>
+      <SectionContainer id="proyectos">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3">
+          <CodeIcon class="size-7" />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
